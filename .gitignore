@@ -17,3 +17,5 @@
 
 /storage/framework/sessions/*
 !/storage/framework/sessions/.gitignore
+
+/storage/framework/sessions/
