@@ -1,0 +1,10 @@
+/* Home page-specific styles. Shared design tokens and components live in app.css. */
+.hero .hero-copy { max-width: 680px; }
+.hero .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.service-card, .barber-card { height: 100%; }
+.service-card .service-image, .barber-card .barber-image { display: block; width: 100%; object-fit: cover; }
+#services, #barbers { scroll-margin-top: 96px; }
+@media (prefers-reduced-motion: no-preference) {
+  .service-card, .barber-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .service-card:hover, .barber-card:hover { transform: translateY(-4px); }
+}

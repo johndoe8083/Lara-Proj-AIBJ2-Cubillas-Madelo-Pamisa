@@ -1,0 +1,8 @@
+/* About page-specific styles. Shared design tokens and components live in app.css. */
+.about-story { align-items: start; }
+.about-copy p { line-height: 1.8; }
+.read-more-content[hidden] { display: none !important; }
+.team-card { height: 100%; }
+.team-card h3 { overflow-wrap: anywhere; }
+.footer-team { margin: 14px auto; max-width: 760px; }
+.footer-team p { margin: 6px 0; }

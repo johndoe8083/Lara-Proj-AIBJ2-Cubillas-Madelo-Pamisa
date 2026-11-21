@@ -1,0 +1,28 @@
+/* Contact page-specific styles. Shared design tokens and components live in app.css. */
+.contact-form .field-error { display: block; min-height: 1.1em; color: #d85b5b; font-size: .82rem; }
+.contact-form [aria-invalid="true"] { outline: 1px solid #d85b5b; }
+.contact-form-card .form-success { margin: 0 0 16px; }
+.contact-detail strong { overflow-wrap: anywhere; }
+
+.contact-detail strong a { color: inherit; text-decoration: none; transition: color .2s ease; }
+.contact-detail strong a:hover { color: var(--gold); }
+
+
+/* Client-side confirmation shown after all contact fields pass validation. */
+.contact-form .client-success {
+    margin: 12px 0 0;
+    padding: 12px 14px;
+    border: 1px solid rgba(198, 155, 78, .55);
+    border-radius: 4px;
+    color: var(--gold, #c69b4e);
+    background: rgba(198, 155, 78, .08);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+.contact-form .client-success[hidden] {
+    display: none;
+}
+.contact-form .contact-submit:disabled {
+    opacity: .72;
+    cursor: wait;
+}
