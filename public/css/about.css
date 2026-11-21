@@ -1,4 +1,4 @@
-/* About page-specific styles. Shared design tokens and components live in app.css. */
+/*About page-specific styles. Shared design tokens and components live in app.css. */
 .about-story { align-items: start; }
 .about-copy p { line-height: 1.8; }
 .read-more-content[hidden] { display: none !important; }
