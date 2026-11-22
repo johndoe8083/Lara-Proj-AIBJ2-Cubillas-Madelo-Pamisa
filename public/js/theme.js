@@ -7,7 +7,9 @@
 
     let savedTheme = null;
     try { savedTheme = localStorage.getItem('barberhub-theme'); } catch (error) {}
-    const prefersLight = window.matchMedia?.('(prefers-color-scheme: light)').matches;
+    const colorScheme = window.matchMedia?.('(prefers-color-scheme: light)');
+    const prefersLight = colorScheme?.matches;
+    let hasUserPreference = savedTheme === 'light' || savedTheme === 'dark';
     let currentTheme = savedTheme === 'light' || savedTheme === 'dark'
         ? savedTheme
         : (prefersLight ? 'light' : 'dark');
@@ -25,8 +27,15 @@
         }
     }
 
-    applyTheme(currentTheme, false);
-    button.addEventListener('click', () => {
+        applyTheme(currentTheme, false);
+        button.addEventListener('click', () => {
+        hasUserPreference = true;
         applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+        colorScheme?.addEventListener('change', (event) => {
+        if (!hasUserPreference) {
+            applyTheme(event.matches ? 'light' : 'dark', false);
+        }
     });
 })();
