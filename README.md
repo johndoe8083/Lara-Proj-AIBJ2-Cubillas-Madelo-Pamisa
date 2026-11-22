@@ -26,10 +26,13 @@
 ## 4. Screenshots
 
 ### Home Page
+<img width="1771" height="949" alt="image" src="https://github.com/user-attachments/assets/065995e9-ed8c-4492-8202-c6bf0b63584b" />
 
 ### About Page
+<img width="1756" height="937" alt="image" src="https://github.com/user-attachments/assets/72ca255a-f24d-4c93-a558-71012670fc2d" />
 
 ### Contact Page
+<img width="694" height="899" alt="image" src="https://github.com/user-attachments/assets/70d84fdc-0c1c-45e8-ac6c-1c872dd5035d" />
 
 ## 5. Steps to Run the Project
 
