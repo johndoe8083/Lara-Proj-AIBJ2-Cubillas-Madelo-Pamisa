@@ -30,7 +30,11 @@
             <label for="contactName">Name</label><input id="contactName" name="name" value="{{ old('name') }}" autocomplete="name" required maxlength="120"><small class="field-error" data-error-for="name"></small>
             <label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" value="{{ old('email') }}" autocomplete="email" required maxlength="190"><small class="field-error" data-error-for="email"></small>
             <label for="contactSubject">Subject</label><input id="contactSubject" name="subject" value="{{ old('subject') }}" required maxlength="180"><small class="field-error" data-error-for="subject"></small>
-            <label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="6" required minlength="10" maxlength="5000">{{ old('message') }}</textarea><small class="field-error" data-error-for="message"></small>
+            <label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="6" required minlength="10" maxlength="5000">{{ old('message') }}</textarea>
+            <div class="message-counter-row">
+                <small class="field-error" data-error-for="message"></small>
+                <small id="messageCharacterCounter" class="message-character-counter" aria-live="polite">0 / 5000 characters</small>
+            </div>
             <button class="button contact-submit" type="submit">SEND MESSAGE →</button>
             <p id="contactClientSuccess" class="client-success" role="status" aria-live="polite" hidden></p>
             <p class="form-note">Your message will be securely submitted and saved for the BarberHub team.</p>
