@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fields = ['name', 'email', 'subject', 'message'];
     const successMessage = document.getElementById('contactClientSuccess');
+    const messageField = form.elements.message;
+    const characterCounter = document.getElementById('messageCharacterCounter');
+    const maxMessageLength = Number(messageField?.getAttribute('maxlength')) || 5000;
+
+    const updateMessageCounter = () => {
+        if (!messageField || !characterCounter) return;
+        const length = messageField.value.length;
+        characterCounter.textContent = `${length} / ${maxMessageLength} characters`;
+        characterCounter.classList.toggle('is-near-limit', length >= maxMessageLength * 0.9);
+        characterCounter.classList.toggle('is-too-short', length > 0 && length < 10);
+    };
+
+    updateMessageCounter();
+    if (messageField) messageField.addEventListener('input', updateMessageCounter);
     const submitButton = form.querySelector('button[type="submit"]');
     const defaultButtonText = submitButton ? submitButton.textContent : '';
 

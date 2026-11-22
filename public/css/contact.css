@@ -26,3 +26,26 @@
     opacity: .72;
     cursor: wait;
 }
+
+
+/* Live message character counter */
+.contact-form .message-counter-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 1.4rem;
+}
+.contact-form .message-character-counter {
+    flex: 0 0 auto;
+    color: var(--muted, #888);
+    font-size: .78rem;
+    text-align: right;
+}
+.contact-form .message-character-counter.is-too-short {
+    color: #d69a36;
+}
+.contact-form .message-character-counter.is-near-limit {
+    color: #d85b5b;
+    font-weight: 600;
+}
