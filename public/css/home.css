@@ -7,4 +7,6 @@
 @media (prefers-reduced-motion: no-preference) {
   .service-card, .barber-card { transition: transform .25s ease, box-shadow .25s ease; }
   .service-card:hover, .barber-card:hover { transform: translateY(-4px); }
+  .hero .button { transition: transform .2s ease; }
+  .hero .button:hover { transform: translateY(-2px); }
 }
