@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
         content.hidden = isExpanded;
-        content.classList.toggle('is-expanded', !isExpanded);
         button.setAttribute('aria-expanded', String(!isExpanded));
         button.textContent = isExpanded ? 'READ MORE +' : 'READ LESS −';
     });
