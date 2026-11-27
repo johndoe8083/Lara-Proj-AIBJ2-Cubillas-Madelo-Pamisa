@@ -11,7 +11,7 @@
     <div class="hero-copy">
         <p class="eyebrow">PREMIUM BARBERSHOP</p>
         <h1>LOOK SHARP.<br><span>FEEL CONFIDENT.</span></h1>
-        <p class="lead">Professional haircuts, precise grooming, and a classic barber experience made for you.</p>
+        <p class="lead">Book online in minutes and walk out sharp, with professional cuts and precise grooming.</p>
         <div class="hero-actions">
             <a class="button" href="{{ auth()->check() && auth()->user()->role === 'customer' ? route('customer.appointments.create') : route('customer.login') }}">BOOK AN APPOINTMENT →</a>
             <a class="button button-outline" href="#services">VIEW SERVICES</a>
